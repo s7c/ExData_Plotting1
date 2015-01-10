@@ -10,7 +10,7 @@ data <- filter(data, Date=="1/2/2007" | Date=="2/2/2007")
 data$DateTime <- as.POSIXct(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S") 
 # And now I get rid of Date & Time columns...
 data$Time <- NULL
-data$Data <- NULL
+data$Date <- NULL
 # Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels..
 #Innitially I used dev.copy(png, file = 'plot1.png', width=480, height=480) but found some distorsions.
 png(file = 'plot2.png', width=480, height=480, bg = 'transparent')
